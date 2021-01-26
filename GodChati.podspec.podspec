@@ -118,7 +118,7 @@ Pod::Spec.new do |spec|
   # spec.framework  = "SomeFramework"
   spec.frameworks = "UIKit","Foundation","SystemConfiguration","CoreGraphics","MobileCoreServices","Security"
 
-  spec.vendored_framework = "ChatFramework"  #静态库文件的依赖
+  spec.vendored_frameworks = "ChatFramework.framework"  #静态库文件的依赖
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
