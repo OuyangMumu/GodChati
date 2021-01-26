@@ -24,8 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "环信 i深圳"
 
   spec.homepage     = "https://github.com/OuyangMumu/GodChati"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -63,8 +62,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -90,8 +89,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -117,9 +116,9 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  spec.frameworks = "UIKit','Foundation","SystemConfiguration","CoreGraphics","MobileCoreServices","Security"
+  spec.frameworks = "UIKit","Foundation","SystemConfiguration","CoreGraphics","MobileCoreServices","Security"
 
-  spec.vendored_frameworks = "ChatFramework.framework"  #静态库文件的依赖
+  spec.vendored_framework = "ChatFramework"  #静态库文件的依赖
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
@@ -134,11 +133,11 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'AFNetworking', '~> 2.3'
-  spec.dependency 'MJExtension', '~> 3.1.2'
   spec.dependency 'MJRefresh', '~> 3.1.15.3'
-  spec.dependency 'Masonry', '~> 1.1.0'
   spec.dependency 'SDWebImage', '~> 5.7.0'
   spec.dependency 'MBProgressHUD', '~> 1.1.0'
+  spec.dependency 'MJExtension'
+  spec.dependency 'Masonry'
   spec.dependency 'HelpDesk'
   spec.dependency 'Hyphenate'
 
